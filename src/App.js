@@ -14,7 +14,7 @@ export default function App() {
       const data = await res.json();
 
       const convertedAmount = (amount * data.rates[to]).toFixed(2);
-      alert(`${amount} ${from} = ${convertedAmount} ${to}`);
+      // alert(`${amount} ${from} = ${convertedAmount} ${to}`);
     }
 
     convert("EUR", "USD", 10);
