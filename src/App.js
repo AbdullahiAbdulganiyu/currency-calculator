@@ -12,12 +12,14 @@ export default function App() {
   useEffect(
     function () {
       async function convert() {
+        setIsLoading(true);
         const res = await fetch(
           `https://api.frankfurter.app/latest?amount=${amount}&from=${from}&to=${to}`
         );
         const data = await res.json();
 
         setConverted(data.rates[to]);
+        setIsLoading(false);
       }
 
       convert();
