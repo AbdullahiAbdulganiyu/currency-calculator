@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 
 export default function App() {
   const [amount, setAmount] = useState(10);
-  const [from, setFrom] = useState("");
-  const [to, setTo] = useState("");
+  const [from, setFrom] = useState("EUR");
+  const [to, setTo] = useState("USD");
 
   useEffect(function () {
     async function convert() {
