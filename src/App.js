@@ -21,7 +21,7 @@ export default function App() {
         setConverted(data.rates[to]);
         setIsLoading(false);
       }
-
+      if (from === to) return setConverted(amount);
       convert();
     },
     [amount, from, to]
