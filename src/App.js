@@ -32,14 +32,23 @@ export default function App() {
         type="text"
         value={amount}
         onChange={(e) => setAmount(Number(e.target.value))}
+        disabled={isLoading}
       />
-      <select value={from} onChange={(e) => setFrom(e.target.value)}>
+      <select
+        value={from}
+        onChange={(e) => setFrom(e.target.value)}
+        disabled={isLoading}
+      >
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
         <option value="INR">INR</option>
       </select>
-      <select value={to} onChange={(e) => setTo(e.target.value)}>
+      <select
+        value={to}
+        onChange={(e) => setTo(e.target.value)}
+        disabled={isLoading}
+      >
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
