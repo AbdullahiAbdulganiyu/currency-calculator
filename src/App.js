@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 
 export default function App() {
+  const [amount, setAmount] = useState(1);
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
 
