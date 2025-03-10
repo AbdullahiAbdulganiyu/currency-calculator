@@ -22,7 +22,7 @@ export default function App() {
   }, []);
   return (
     <div>
-      <input type="text" />
+      <input type="text" value={amount} onChange={setAmount((e) => e.target)} />
       <select value={from} onChange={() => setFrom((e) => e.target)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
