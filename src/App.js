@@ -22,13 +22,13 @@ export default function App() {
   return (
     <div>
       <input type="text" />
-      <select>
+      <select value={from}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
         <option value="INR">INR</option>
       </select>
-      <select>
+      <select value={to}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
