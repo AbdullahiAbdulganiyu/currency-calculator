@@ -7,6 +7,7 @@ export default function App() {
   const [from, setFrom] = useState("EUR");
   const [to, setTo] = useState("USD");
   const [converted, setConverted] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(
     function () {
