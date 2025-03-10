@@ -22,13 +22,13 @@ export default function App() {
   return (
     <div>
       <input type="text" />
-      <select value={from}>
+      <select value={from} onChange={() => setFrom((e) => e.target)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
         <option value="INR">INR</option>
       </select>
-      <select value={to}>
+      <select value={to} onChange={() => setTo((e) => e.target)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
