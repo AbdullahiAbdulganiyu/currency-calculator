@@ -22,14 +22,18 @@ export default function App() {
   }, []);
   return (
     <div>
-      <input type="text" value={amount} onChange={setAmount((e) => e.target)} />
-      <select value={from} onChange={setFrom((e) => e.target)}>
+      <input
+        type="text"
+        value={amount}
+        onChange={(e) => setAmount(e.target.value)}
+      />
+      <select value={from} onChange={(e) => setFrom(e.target.value)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
         <option value="INR">INR</option>
       </select>
-      <select value={to} onChange={setTo((e) => e.target)}>
+      <select value={to} onChange={(e) => setTo(e.target.value)}>
         <option value="USD">USD</option>
         <option value="EUR">EUR</option>
         <option value="CAD">CAD</option>
