@@ -8,18 +8,21 @@ export default function App() {
   const [to, setTo] = useState("USD");
   const [converted, setConverted] = useState("");
 
-  useEffect(function () {
-    async function convert() {
-      const res = await fetch(
-        `https://api.frankfurter.dev/v1/latest?amount=${amount}&from=${from}&to=${to}`
-      );
-      const data = await res.json();
+  useEffect(
+    function () {
+      async function convert() {
+        const res = await fetch(
+          `https://api.frankfurter.dev/v1/latest?amount=${amount}&from=${from}&to=${to}`
+        );
+        const data = await res.json();
 
-      setConverted(data.rates[to]);
-    }
+        setConverted(data.rates[to]);
+      }
 
-    convert();
-  }, []);
+      convert();
+    },
+    [amount, from, to]
+  );
   return (
     <div>
       <input
