@@ -3,12 +3,12 @@
 import { useEffect, useState } from "react";
 
 export default function App() {
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState(10);
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
 
   useEffect(function () {
-    async function convert(from, to, amount) {
+    async function convert() {
       const res = await fetch(
         `https://api.frankfurter.dev/v1/latest?amount=${amount}&from=${from}&to=${to}`
       );
@@ -18,7 +18,7 @@ export default function App() {
       // alert(`${amount} ${from} = ${convertedAmount} ${to}`);
     }
 
-    convert("EUR", "USD", 10);
+    convert();
   }, []);
   return (
     <div>
